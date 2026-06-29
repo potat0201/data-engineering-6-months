@@ -91,4 +91,23 @@ WHERE city <> 'Hanoi';
 -- 17. Tìm khách hàng có email chứa example.com
 SELECT *
 FROM customers
-WHERE email LIKE '%example.com%';
+WHERE email LIKE '%example.com%';   
+
+-- 18. Thêm một dòng test để xoá
+INSERT INTO customers (customer_id, full_name, email, city)
+VALUES
+    (7, 'Test User', 'test@example.com', 'Test City');
+
+-- 19. Kiểm tra dòng test
+SELECT *
+FROM customers
+WHERE customer_id = 7;
+
+-- 20. Xoá dòng test
+DELETE FROM customers
+WHERE customer_id = 7;
+
+-- 21. Kiểm tra sau khi DELETE
+SELECT *
+FROM customers
+WHERE customer_id = 7;
