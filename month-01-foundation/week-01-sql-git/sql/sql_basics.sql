@@ -18,3 +18,16 @@ VALUES
 
 -- 3. Lấy toàn bộ dữ liệu từ bảng customers
 SELECT * FROM customers;
+
+-- 4. SELECT tất cả cột từ bảng customers
+SELECT *
+FROM customers;
+
+-- 5. SELECT một số cột cụ thể
+SELECT customer_id, full_name
+FROM customers;
+
+-- 6. Lọc dữ liệu với WHERE
+SELECT *
+FROM customers
+WHERE city = 'Hanoi';
