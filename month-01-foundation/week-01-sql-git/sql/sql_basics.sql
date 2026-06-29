@@ -53,3 +53,42 @@ SELECT *
 FROM customers
 ORDER BY customer_id DESC
 LIMIT 1;
+
+-- 11. Thêm thêm dữ liệu mẫu vào bảng customers
+INSERT INTO customers (customer_id, full_name, email, city)
+VALUES
+    (4, 'Pham Quoc Dung', 'dung@example.com', 'Hanoi'),
+    (5, 'Hoang Thu Ha', 'ha@example.com', 'Ho Chi Minh'),
+    (6, 'Do Manh Hung', 'hung@example.com', 'Hanoi');
+
+-- 12. Lọc khách hàng có customer_id từ 4 trở lên
+SELECT *
+FROM customers
+WHERE customer_id >= 4;
+
+-- 13. Lọc khách hàng ở Hanoi
+SELECT *
+FROM customers
+WHERE city = 'Hanoi';
+
+-- 14. Lọc khách hàng ở Hanoi và customer_id từ 4 trở lên
+SELECT *
+FROM customers
+WHERE city = 'Hanoi'
+  AND customer_id >= 4;
+
+-- 15. Lọc khách hàng ở Hanoi hoặc Da Nang
+SELECT *
+FROM customers
+WHERE city = 'Hanoi'
+   OR city = 'Da Nang';
+
+-- 16. Lọc khách hàng không ở Hanoi
+SELECT *
+FROM customers
+WHERE city <> 'Hanoi';
+
+-- 17. Tìm khách hàng có email chứa example.com
+SELECT *
+FROM customers
+WHERE email LIKE '%example.com%';
