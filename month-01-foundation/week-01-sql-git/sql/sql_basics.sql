@@ -31,3 +31,25 @@ FROM customers;
 SELECT *
 FROM customers
 WHERE city = 'Hanoi';
+
+-- 7. Sắp xếp dữ liệu tăng dần với ORDER BY ASC
+SELECT *
+FROM customers
+ORDER BY customer_id ASC;
+
+-- 8. Sắp xếp dữ liệu giảm dần với ORDER BY DESC
+SELECT *
+FROM customers
+ORDER BY customer_id DESC;
+
+-- 9. Giới hạn số dòng trả về với LIMIT
+SELECT *
+FROM customers
+LIMIT 2;
+
+-- 10. Kết hợp ORDER BY và LIMIT
+-- Lấy khách hàng có customer_id lớn nhất
+SELECT *
+FROM customers
+ORDER BY customer_id DESC
+LIMIT 1;
